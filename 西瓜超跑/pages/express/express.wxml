@@ -1,0 +1,35 @@
+<!-- 快递跑腿下单页面 -->
+<view>
+	<view>
+		<text class="sign-title">取件单</text>
+	</view>
+	<form bindsubmit="expressSubmit">
+		<text class="input-head">取件地点：</text>
+		<picker bindchange="bindPointChange" value="{{point_index}}" range="{{point}}">
+			<view class="input-content point-content">
+				{{point[point_index]}}
+				<image src="../../images/down.png" class="input-bg-down"></image>
+			</view>
+		</picker>
+		<text class="input-head">取件码：</text>
+		<input type="number" class="input-content" maxlength="6" name='code' placeholder="请输入取件码" />
+		<text class="input-head">送件地址：</text>
+		<picker mode="multiSelector" bindchange="bindAddressChange" value="{{address_index}}" range="{{address}}">
+			<view class="input-content address-content">
+				{{address[0][address_index[0]]}}---{{address[1][address_index[1]]}}
+				<image src="../../images/down.png" class="input-bg-down"></image>
+			</view>
+		</picker>
+		<input type="number" class="input-content" maxlength="3" name='roomNumber' placeholder="请输入3位寝室号" />
+		<text class="input-head">手机号：</text>
+		<input type="number" class="input-content" bindblur="checkPhone" maxlength="11" name='telephone' placeholder="请输入手机号" />
+		<text class="input-head">跑腿费：(元)</text>
+		<input type="number" class="input-content" maxlength="2" name='cost' placeholder="请输入跑腿费" />
+		<text class="input-head">照片（校园卡/订单截图）：</text>
+		<view class="choose-image">
+			<image class="image-content" src="{{image}}" bindtap="chooseImage"></image>
+		</view>
+
+		<button form-type="submit" class="express-btn">立即下单</button>
+	</form>
+</view>

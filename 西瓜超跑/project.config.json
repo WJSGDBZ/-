@@ -1,0 +1,92 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.10.4",
+	"appid": "wxe1acbca27eec7ab2",
+	"projectname": "%E8%A5%BF%E7%93%9C%E8%B6%85%E8%B7%91",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "注册页面",
+					"pathName": "pages/sign/sign",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "快递跑腿",
+					"pathName": "pages/express/express",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "电脑维修",
+					"pathName": "pages/computer/computer",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "订单编译",
+					"pathName": "pages/order/order",
+					"scene": null
+				}
+			]
+		}
+	}
+}

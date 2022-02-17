@@ -1,0 +1,28 @@
+<!-- 快递跑腿下单页面 -->
+<view>
+	<view>
+		<text class="sign-title">维修单</text>
+	</view>
+	<form bindsubmit="computerSubmit">
+		<text class="input-head">联系人：</text>
+		<input type="text" class="input-content" maxlength="6" name='name' placeholder="请输入联系人姓名" />
+		<text class="input-head">维修地址：</text>
+		<picker mode="multiSelector" bindchange="bindAddressChange" value="{{address_index}}" range="{{address}}">
+			<view class="input-content address-content">
+				{{address[0][address_index[0]]}}---{{address[1][address_index[1]]}}
+				<image src="../../images/down.png" class="input-bg-down"></image>
+			</view>
+		</picker>
+		<input type="number" class="input-content" maxlength="3" name='roomNumber' placeholder="请输入3位寝室号" />
+		<text class="input-head">手机号：</text>
+		<input type="number" class="input-content" bindblur="checkPhone" maxlength="11" name='telephone' placeholder="请输入手机号" />
+		<text class="input-head">问题描述：</text>
+		<textarea class="textarea-question" name="description" maxlength="55" placeholder="请描述具体的电脑故障（最多55字）" />
+		<text class="input-head">照片（故障状况）：</text>
+		<view class="choose-image">
+			<image class="image-content" src="{{image}}" bindtap="chooseImage"></image>
+		</view>
+
+		<button form-type="submit" class="computer-btn">立即下单</button>
+	</form>
+</view>

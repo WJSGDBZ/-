@@ -1,0 +1,22 @@
+<!-- 新用户注册页面 -->
+<view>
+	<view>
+		<text class="sign-title">用户注册</text>
+	</view>
+	<form bindsubmit="signSubmit">
+		<text class="input-head">手机号：</text>
+		<input type="number" class="input-content" bindblur="checkPhone" auto-focus maxlength="11" name='telephone' placeholder="请输入手机号" />
+		<text class="input-head">学号：</text>
+		<input type="number" class="input-content" bindblur="checkStudentNumber" maxlength="13" name='studentNumber' placeholder="请输入学号" />
+		<text class="input-head">性别:</text>
+		<!-- <input name='sex' class="input-content" placeholder="您的性别" /> -->
+		<picker bindchange="bindSexChange" value="{{sex_index}}" range="{{sex}}">
+			<view class="input-content sex-content">
+				{{sex[sex_index]}}
+			</view>
+		</picker>
+		<text class="input-head">年龄:</text>
+		<input name='age' class="input-content" type="number" placeholder="请输入你的年龄" maxlength="2" />
+		<button form-type="submit" class="sign-btn">立即注册</button>
+	</form>
+</view>

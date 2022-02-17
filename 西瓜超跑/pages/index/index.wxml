@@ -1,0 +1,53 @@
+<view class="user_info">
+	<view wx:if="{{!isLogin}}">
+		<button class="login_btn" id="login_btn" bindtap="login" open-type="getUserInfo">登录</button>
+	</view>
+	<view class="userinfo-panel" wx:else>
+		<view class="userinfo-avatar">
+			<open-data type="userAvatarUrl"></open-data>
+		</view>
+
+		<view class="userinfo-id">
+			<text>用户ID：{{userinfo.id}}</text>
+		</view>
+		<view class="userinfo-name">
+			<text>昵称：</text>
+			<open-data type="userNickName"></open-data>
+		</view>
+		<view class="userinfo-tel">
+			<text>电话：{{userinfo.telephone}}</text>
+		</view>
+		<view class="userinfo-sno">
+			<text>学号：{{userinfo.studentNumber}}</text>
+		</view>
+		<view class="userinfo-sex">
+			<text>性别：{{userinfo.sex}}</text>
+		</view>
+		<button bindtap="exit" class="btn-exit" style="width:180rpx">退出登录</button>
+		<button class="btn-staff-run" wx:if="{{role=='MEMBER'}}" bindtap="askStaff" style="width:180rpx">申请兼职</button>
+		<button class="btn-staff-run" wx:else bindtap="goToStaff" style="width:180rpx">兼职接单</button>
+		
+		<text class="bottom-title">西瓜会员卡</text>
+	</view>
+</view>
+
+<view class="head_name">
+	<text>--------- </text>
+	<text>功能百宝箱</text>
+	<text> ---------</text>
+</view>
+
+<view class="content_list">
+	<view id="content_1">
+		<image src="../../images/content_1.jpg" bindtap="goToExpress"></image>
+	</view>
+	<view id="content_1">
+		<image src="../../images/content_2.jpg" bindtap="goToComputer"></image>
+	</view>
+	<view id="content_1">
+		<image src="../../images/content_3.jpg" bindtap="goToElectric"></image>
+	</view>
+	<view id="content_1">
+		<image src="../../images/content_4.jpg" bindtap="goToOrder"></image>
+	</view>
+</view>

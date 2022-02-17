@@ -1,0 +1,15 @@
+<view class="order-item" wx:for="{{orderList}}" wx:key="id">
+<text class="order-id">订单编号：{{item.id}}</text>
+<text class="order-address">维修地址：{{item.address}}</text>
+<text class="order-telephone">电话：{{item.telephone}}</text>
+<text class="order-another">||联系人：{{item.anotherName}}</text>
+<text class="order-time">下单时间：{{item.createdTime}}</text>
+<text class="order-description">问题描述：{{item.description}}</text>
+<text class="order-status" wx:if="{{item.status==0}}">未接单</text>
+<text class="order-status" wx:elif="{{item.status==1}}">已接单</text>
+<text class="order-status" wx:elif="{{item.status==2}}">已完成</text>
+<text class="order-status" wx:else style="color:red">订单异常</text>
+<button class="order-image" bindtap="previewImage" data-url="{{item.url}}" style="width:200rpx;margin: 160rpx 0 0 450rpx">查看图片</button>
+<button class="order-connect" bindtap="callStaff" data-staff="{{item.staffName}}" style="width:200rpx;margin: 210rpx 0 0 450rpx">联系小哥</button>
+<button class="order-delete" bindtap="deleteOrder" data-id="{{item.id}}" style="width:200rpx;margin: 260rpx 0 0 450rpx;">删除订单</button>
+</view>

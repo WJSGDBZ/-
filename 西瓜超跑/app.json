@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/express/express",
+    "pages/computer/computer",
+    "pages/all/all",
+    "pages/staff/staff",
+    "pages/order/order",
+    "pages/electric/electric",
+    "pages/sign/sign",
+    "pages/order-express/order-express",
+    "pages/order-computer/order-computer",
+    "pages/order-electric/order-electric",
+    "pages/history/history",
+    "pages/webSocket/websocket"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FF8500",
+    "navigationBarTitleText": "西瓜超跑",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "",
+        "iconPath": "images/icon_2.png",
+        "selectedIconPath": "images/icon_2.png"
+      },
+      {
+        "pagePath": "pages/express/express",
+        "text": "取快递",
+        "iconPath": "images/icon_4.png",
+        "selectedIconPath": "images/icon_4_se.png"
+      },
+      {
+        "pagePath": "pages/computer/computer",
+        "text": "修电脑",
+        "iconPath": "images/icon_3.png",
+        "selectedIconPath": "images/icon_3_se.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "images/icon_5.png",
+        "selectedIconPath": "images/icon_5_se.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

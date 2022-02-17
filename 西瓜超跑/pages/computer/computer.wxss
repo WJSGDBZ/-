@@ -1,0 +1,66 @@
+
+.sign-title{
+  width: 600rpx;
+  margin: 50rpx auto 50rpx auto;
+  display: block;
+  font-size: 60rpx;
+  font-weight: bolder;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-shadow:1rpx 1rpx 10rpx rgb(255, 127, 22),1rpx 1rpx 10rpx rgb(148, 67, 0);
+  background-color: rgb(255, 166, 0);
+  box-shadow: 0rpx 0rpx 5rpx rgb(223, 77, 77);
+}
+
+.input-head{
+  display: block;
+  font-size: 30rpx;
+  font-weight: bold;
+  margin:10rpx 0 20rpx 15rpx;
+}
+
+.input-content{
+  border: 1px solid #f7efef;
+  height: 80rpx;
+  padding-left: 20rpx;
+}
+
+.address-content,.point-content{
+  line-height: 80rpx;
+  font-weight: bold;
+}
+
+.input-bg-down{
+  /* width: auto; */
+  width: 20rpx;
+  height: 30%;
+  float: right;
+  margin-top: 32rpx;
+  margin-right: 20rpx;
+}
+
+.choose-image{
+  border: 1rpx solid #f7efef;
+  width: 300rpx;
+  height: 250rpx;
+  margin-left: 30rpx;
+}
+
+.image-content{
+  width: 300rpx;
+  height: 250rpx;
+}
+.textarea-question{
+  border: 1rpx solid #f7efef; 
+  height: 280rpx;
+  width: 720rpx;
+  padding: 10rpx 10rpx 10rpx 20rpx;
+}
+
+.computer-btn{
+  display: block;
+  margin-top: 50rpx;
+  background-color: rgb(255, 145, 0);
+  color: white;
+  margin-bottom: 30rpx;
+}

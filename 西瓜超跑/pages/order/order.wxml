@@ -1,0 +1,17 @@
+<view class="order-body">
+	<view class="order-head">
+		<image src="../../images/logo.png" class="order-head-image"></image>
+		<!-- <text class="order-title">西瓜超跑</text> -->
+	</view>
+
+	<view class="order-express" bindtap="goToOrderExpress">
+		<text class="order-express-text">跑腿订单</text>
+	</view>
+	<view class="order-computer" bindtap="goToOrderComputer">
+		<text class="order-computer-text">维修订单</text>
+	</view>
+	<view class="order-electric" bindtap="goToOrderElectric">
+		<text class="order-electric-text">电费订单</text>
+	</view>
+
+</view>

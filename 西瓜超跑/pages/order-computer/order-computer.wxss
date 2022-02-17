@@ -1,0 +1,90 @@
+.order-item{
+  height: 330rpx;
+  width: 680rpx;
+  background-color: rgb(243, 243, 243);
+  border-radius: 10rpx;
+  margin:30rpx auto 0 auto;
+  box-shadow: 3rpx 3rpx 10rpx rgba(0, 0, 0, 0.555);
+  position: relative;
+}
+
+.order-id{
+  position: absolute;
+  display: block;
+  font-size: 35rpx;
+  font-weight: bold;
+  color: brown;
+  margin: 15rpx 0 0 20rpx;
+}
+
+.order-status{
+  position: absolute;
+  display: block;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: rgb(165, 154, 154);
+  margin: 20rpx 0 0 500rpx;
+}
+
+.order-address{
+  position: absolute;
+  display: block;
+  font-weight: bolder;
+  font-size: 25rpx;
+  color: rgb(192, 119, 119);
+  margin: 75rpx 0 0 20rpx;
+}
+
+.order-telephone{
+  position: absolute;
+  display: block;
+  font-size: 25rpx;
+  color: rgb(172, 172, 172);
+  margin: 115rpx 0 0 20rpx;
+}
+
+.order-another{
+  position: absolute;
+  display: block;
+  font-size: 25rpx;
+  color: rgb(172, 172, 172);
+  margin: 115rpx 0 0 450rpx;
+}
+
+.order-time{
+  position: absolute;
+  display: block;
+  font-size: 25rpx;
+  color: rgb(172, 172, 172);
+  margin: 155rpx 0 0 20rpx;
+}
+.order-description{
+  position: absolute;
+  display: block;
+  font-size: 25rpx;
+  color: rgb(172, 172, 172);
+  margin: 195rpx 0 0 20rpx;
+  /* border: 1rpx solid black; */
+  width: 400rpx;
+  overflow: hidden;
+  max-height: 135rpx;
+}
+
+
+.order-image,.order-connect{
+  position: absolute;
+  display: block;
+  padding: 0;
+  font-size: 28rpx;
+  color: white;
+  background-color: rgb(241, 173, 82);
+}
+
+.order-delete{
+  position: absolute;
+  display: block;
+  padding: 0;
+  font-size: 28rpx;
+  color: white;
+  background-color: rgb(255, 38, 0);
+}

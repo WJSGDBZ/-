@@ -1,0 +1,126 @@
+<view id="container">
+	<view class="title_container">
+		<button class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">快递</button>
+		<button class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">维修</button>
+		<button class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">缴电费</button>
+	</view>
+	<view class="scroll_box">
+		<scroll-view scroll-x="true" class="jump" scroll-left="240">
+			<view bindtap="goback" style="color:{{Getcolor}}">首页</view>
+			<view bindtap="onjump" style="color:{{Getcolor}}">我要接单</view>
+			<view bindtap="onback" style="color:{{Getcolor}}">我的订单</view>
+			<view style="color:{{Mycolor}}">历史订单</view>
+		</scroll-view>
+	</view>
+	<view class="ex_message_detail" style="visibility:{{ex_visibility}}" bindtap="ex_detail">
+		<text>下单时间：{{ex_detail_contents.createdTime}}</text>
+		<text>取件地点：{{ex_detail_contents.point}}</text>
+		<text>收获地点：{{ex_detail_contents.address}}</text>
+		<text>　取件码：{{ex_detail_contents.code}}</text>
+		<text>　快递费：{{ex_detail_contents.cost}}</text>
+		<text>　　电话：{{ex_detail_contents.telephone}}</text>
+		<view class="ex_image_detail">
+			<text>　　照片：</text>
+			<image src="{{ex_detail_contents.url}}" catchtap="onex_detail_image"></image>
+		</view>
+	</view>
+
+	<view class="ex_message_detail" style="visibility:{{re_visibility}}" bindtap="re_detail">
+		<text>下单时间：{{re_detail_contents.createdTime}}</text>
+		<text>　联系人：{{re_detail_contents.anotherName}}</text>
+		<text>详细地址：{{re_detail_contents.address}}</text>
+
+		<text>客户电话：{{re_detail_contents.telephone}}</text>
+		<text>详细情况：{{re_detail_contents.description}}</text>
+		<view class="ex_image_detail">
+			<text>　　照片：</text>
+			<image src="{{re_detail_contents.url}}" catchtap="onre_detail_image" data-id='0'></image>
+			<!-- <image src="{{re_detail_contents.url[1]}}" bindtap="onre_detail_image" data-id='1'></image>
+			<image src="{{re_detail_contents.url[2]}}" bindtap="onre_detail_image" data-id='2'></image>
+			<image src="{{re_detail_contents.url[3]}}" bindtap="onre_detail_image" data-id='3'></image> -->
+		</view>
+	</view>
+
+	<view class="ex_message_detail" style="visibility:{{el_visibility}}" bindtap="el_detail">
+		<text>下单时间：{{el_detail_contents.createdTime}}</text>
+		<text>地址：{{el_detail_contents.address}}</text>
+		<text>充值金额：{{el_detail_contents.charge}}</text>
+		<text>快递费：{{el_detail_contents.salary}}</text>
+	</view>
+	<swiper current="{{currentTab}}" duration="200" bindchange="swiperChange" style="height:{{cur_height}}rpx">
+		<swiper-item>
+			<view class="title_container">
+				<h1>历史订单</h1>
+			</view>
+			<block wx:for="{{posts_contents}}" wx:for-item="item" wx:key="key">
+				<view class="message_container">
+					<image wx:if="{{express_image}}" src="/icon/success.jpg" mode="aspectFit" class="messqge-image"></image>
+					<view class="message" bindtap="ex_detail" data-id="{{item.id}}">
+						<view class="message_detail">
+							<view class="message_title">
+								<image src="/images/kuaidi.png" class="order-image"></image>
+								<view class="order-type">取快递</view>
+							</view>
+							<view class="message_text">
+								<text class="order-cretime">下单时间：{{item.createdTime}}</text>
+								<text class="order-address">取件地点：{{item.point}}</text>
+								<text class="order-no">收货地点：{{item.address}}</text>
+								<text class="order-cost">快递费：{{item.cost}} 元</text>
+							</view>
+						</view>
+					</view>
+				</view>
+			</block>
+		</swiper-item>
+
+		<swiper-item>
+			<view class="title_container">
+				<h1>历史订单</h1>
+			</view>
+			<block wx:for="{{repair_contents}}" wx:for-item="item" wx:key="key">
+				<view class="message_container">
+					<image wx:if="{{express_image}}" src="/icon/success.jpg" mode="aspectFit"></image>
+					<view class="message" bindtap="re_detail" data-id="{{item.id}}">
+						<view class="message_detail">
+							<view class="message_title">
+								<image src="/images/weixiu.png" class="order-image"></image>
+								<text class="order-type">维修</text>
+							</view>
+							<view class="message_text">
+								<text class="order-cretime">下单时间：{{item.createdTime}}</text>
+								<text class="order-address">目的地：{{item.address}}</text>
+								<text class="order-no">联系方式：{{item.telephone}}</text>
+								<text class="message_reason">描述：{{item.description}}</text>
+							</view>
+						</view>
+					</view>
+				</view>
+			</block>
+		</swiper-item>
+
+		<swiper-item>
+			<view class="title_container">
+				<h1>历史订单</h1>
+			</view>
+			<block wx:for="{{electric_contents}}" wx:for-item="item" wx:key="key">
+				<view class="message_container">
+					<image wx:if="{{express_image}}" src="/icon/success.jpg" mode="aspectFit"></image>
+					<view class="message" bindtap="el_detail" data-id="{{item.id}}">
+						<view class="message_detail">
+							<view class="message_title">
+								<icon type="success"></icon>
+								<text>缴电费</text>
+							</view>
+							<view class="message_text">
+								<text>下单时间：{{item.createdTime}}</text>
+								<text>目的地：{{item.build}}</text>
+								<text>缴费金额：{{item.charge}}</text>
+								<text>跑腿费：{{item.salary}}</text>
+							</view>
+						</view>
+					</view>
+				</view>
+			</block>
+		</swiper-item>
+	</swiper>
+</view>
